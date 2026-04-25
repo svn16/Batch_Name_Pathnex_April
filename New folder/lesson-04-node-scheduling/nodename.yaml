@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  nodeName: worker-node2.example.com
+  containers:
+  - name: nginx
+    image: httpd
+    imagePullPolicy: IfNotPresent
